@@ -1,0 +1,153 @@
+@font-face {
+  font-family: 'Nuosu SIL';
+  src: url('./Nuosu_Sil/NuosuSIL-REgular.ttf') format('truetype');
+}
+
+body {
+  font-family: Inter, sans-serif;
+  color: #004b1a;
+  font-size: 1rem;
+  line-height: 1.4em;
+  font-weight: 400;
+  margin: 0;
+  min-height: 100%;
+  background-color: #fff; 
+}
+
+/* HEADER */
+
+header {
+  padding: 1.5rem 3rem;
+  border-bottom: 1px solid #004b1a;
+  background-color: #f9f2e6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: fit-content;
+}
+
+a {
+  color: #004b1a;
+  text-decoration: none;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.links {
+  display: flex;
+  gap: 2rem;
+}
+
+.logo {
+  height: 3rem;
+}
+
+.recipes-address {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+}
+
+.address p {
+  margin: 0 0;
+  font-size: .8rem;
+}
+
+.recipes {
+  padding: 8px 18px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #c4ff88;
+  border-radius: 5px;
+  background-color: #004b1a;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  color: #c4ff88;
+  font-size: 15px;
+  text-decoration: none !important;
+  letter-spacing: 1px;
+}
+
+.recipes:hover {
+  background-color: #c4ff88;
+  color: #004b1a;
+  border-color: #004b1a;
+}
+
+/* FOOTER */
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #f9f2e6;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1.5rem 0rem;
+}
+
+.icons-footer-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.personal-link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: .3rem;
+}
+
+.personal-link > a {
+font-size: 1rem;
+}
+
+/* SECTION WITH MENU TITLE */
+
+.menu-title {
+  text-align: center;
+  width: 100%;
+  height: fit-content;
+}
+
+.menu-title > div {
+  padding: 5rem 23rem;
+  margin: 4rem auto;
+  width: fit-content;
+  border-radius: 10px;
+  background-color: #c4ff88;
+}
+
+.menu-title > div > h1 {
+  font-family: 'Nuosu SIL', sans-serif;
+  line-height: 1.2em;
+  font-weight: 400;
+  font-size: 5rem;
+  margin: 0 0;
+}
+
+/* SECTION WITH GALLERY IMAGES */
+
+.gallery {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
