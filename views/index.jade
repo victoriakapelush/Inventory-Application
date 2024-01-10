@@ -5,10 +5,10 @@ head
 block content
   header 
     div.links 
-      a(href="#") Our Menu 
-      a(href="./users") Our Story
+      a(href="#") Our Menu
+      a(href="./story") Our Story
     div.logo
-      img.logo(src="https://assets.website-files.com/62b03a7e084ea567885272c1/62bfeeaf622dd076e2779deb_bewellfed.svg", alt="Logo")
+      img.logo(src="./images/title.svg", alt="Logo")
     div.recipes-address
       div.address
         p 119 Tanglewood Lane 
@@ -19,11 +19,21 @@ block content
       h1 Our menu
       p Our chefs have designed a variety of nutritious, gourmet dishes for you to relish.
   section.gallery 
-
+    if products
+      each product in products
+        div.productContainer
+          img.productImage(src=product.product_image, alt=product.product_name)
+          div.productNamePriceBox 
+            p.productName #{product.product_name}
+            div.productPrice 
+              p #{product.product_price}
+          p.productDescription #{product.product_description}
+          a.recipes.editLink(href="#") Edit 
+    else
+      p No products found
   footer 
     div.icons-footer-left
       img.logo(src="https://assets.website-files.com/62b03a7e084ea567885272c1/62b195f3d08db6cdb97ac5e1_shape-07.svg", alt="icon")
-      
     div.personal-link
       p Designed and developed by 
       a.recipes(href="https://victoriakapelush.com" target='_blank') Victoria Kapelush

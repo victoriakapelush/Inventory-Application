@@ -5,14 +5,15 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var storyRouter = require('./routes/story');
 
 var app = express();
 
 // Set up mongoose connection
 const mongoose = require("mongoose");
+const Product = require('./models/product');
 mongoose.set("strictQuery", false);
-const mongoDB = "mongodb+srv://victoriakapelush:<sakuraSun123>@cluster0.qpt6ako.mongodb.net/?inventory_application?retryWrites=true&w=majority";
+const mongoDB = "mongodb+srv://victoriakapelush:sakuraSun123@cluster0.qpt6ako.mongodb.net/inventory_application?retryWrites=true&w=majority";
 
 // Wait for database to connect, logging an error if there is a problem
 main().catch((err) => console.log(err));
@@ -31,7 +32,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/story', storyRouter);
 
 // Define a schema
 const Schema = mongoose.Schema;

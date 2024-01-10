@@ -1,9 +1,16 @@
-var express = require('express');
-var router = express.Router();
+// routes/index.js
+const express = require('express');
+const router = express.Router();
+const Product = require('../models/product');
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+router.get('/', async (req, res) => {
+  try {
+    const products = await Product.find().exec();
+    res.render('index', { title: 'be WEllfed Grocery store', products });
+  } catch (error) {
+    console.error('Error fetching products:', error);
+    res.status(500).send('Internal Server Error');
+  }
 });
 
 module.exports = router;

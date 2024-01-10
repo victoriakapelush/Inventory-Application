@@ -1,0 +1,58 @@
+extends layout
+head 
+  title Inventory Application
+
+block content
+  header 
+    div.links 
+      a(href="/") Our Menu
+      a(href="./story") Our Story
+    div.logo
+      img.logo(src="./images/title.svg", alt="Logo")
+    div.recipes-address
+      div.address
+        p 119 Tanglewood Lane 
+        p Gulfport, MS 39503
+      a.recipes(href="#") Recipes
+  section.story
+    div.storyParagraph
+        h1 We find the most nutritious options out there
+        p Embark on a journey with us as we explore the essence of nutrition and culinary delight. Our commitment goes beyond providing just products; we delve into the world of cooked food and curated selections that redefine your understanding of wholesome nourishment. 
+        p Our culinary experts tirelessly source and create a repertoire of the most nutritious options available, ensuring that every bite is not only a feast for the senses but also a celebration of health. From thoughtfully crafted cooked meals to a carefully curated collection of products in our online store, each item tells a unique story of quality, flavor, and well-being. 
+        p Join us on this gastronomic adventure, where every dish and product echoes our dedication to delivering unparalleled taste and nutrition to your table. Discover the story behind every meal and product, and let the journey to a healthier, more delicious lifestyle begin.
+        img.logo.signature(src="./images/story-signature.png", alt="Signature")
+    div
+        img.storyPhoto(src="./images/story-women-photo.jpg", alt="Two women having a conversation")
+        img.green-star-image(src="./images/story-green-star.svg", alt="Green star")
+  section.mission
+    div.two-images
+        img(src="./images/story-food-one.jpg", alt="Food image")
+        img(src="./images/story-food-two.jpg", alt="Food image on the phone")
+    div.missionParagraph 
+        h1 Our mission is to help people save time while enjoying authentic home-cooking food with the most beneficial options
+        p Our goal is to empower individuals to savor the authenticity of home-cooked meals by providing the most beneficial options, saving them valuable time.
+        a.exploreButton(href="#") Explore
+  section.chefs
+    div.chefsHeading 
+        h1 Meet our nutrition chefs
+    div.chefs-photos-container 
+        div.singleImageBox 
+            img.storyPhoto(src="./images/chef-judy.jpg", alt="Chef Judy")
+            h1 Judy Nguyen
+            p Executive Sous Chef 
+        div.singleImageBox  
+            img.storyPhoto(src="./images/chef-billy.jpg", alt="Chef Billy")
+            h1 Billy Velasquez
+            p Director of Nutrition
+        div.singleImageBox  
+            img.storyPhoto(src="./images/chef-carolyn.jpg", alt="Chef Carolyn")
+            h1 Carolyn Ortiz
+            p Sous Chef 
+  footer 
+    div.icons-footer-left
+      img.logo(src="https://assets.website-files.com/62b03a7e084ea567885272c1/62b195f3d08db6cdb97ac5e1_shape-07.svg", alt="icon")
+    div.personal-link
+      p Designed and developed by 
+      a.recipes(href="https://victoriakapelush.com" target='_blank') Victoria Kapelush
+    div 
+      img.logo(src="https://assets.website-files.com/62b03a7e084ea567885272c1/62b19709084a2a4746a326da_29%20(2).svg", alt="icon2")
