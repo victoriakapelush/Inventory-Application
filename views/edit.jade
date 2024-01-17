@@ -8,29 +8,23 @@ block content
       a(href="/") Our Menu
       a(href="./story") Our Story
     div.logo
-      img.logo(src="./images/title.svg", alt="Logo")
+      img.logo(src="../images/title.svg", alt="Logo")
     div.recipes-address
       div.address
         p 119 Tanglewood Lane 
         p Gulfport, MS 39503
       a.recipes(href="#") Recipes
-  section.menu-title
-    div 
-      h1 Our menu
-      p Our chefs have designed a variety of nutritious, gourmet dishes for you to relish.
-  section.gallery 
-    if products
-      each product in products
-        div.productContainer
-          img.productImage(src=product.product_image, alt=product.product_name)
-          div.productNamePriceBox 
-            p.productName #{product.product_name}
-            div.productPrice 
-              p #{product.product_price}
-          p.productDescription #{product.product_description}
-          a.recipes.editLink(href=`./edit/${product.product_id}`) Edit
-    else
-      p No products found
+  section.edit-page
+    div
+      if product_image
+        img.editProductImage(src=`.${product_image}`, alt=product_name)
+    div.editProductGeneralInfo
+      if product_name
+        p.editProductName !{product_name}
+      if product_description
+        p.editProductDescription !{product_description}
+      if product_price
+        p.editProductPrice.productPrice !{product_price}
   footer 
     div.icons-footer-left
       img.logo(src="https://assets.website-files.com/62b03a7e084ea567885272c1/62b195f3d08db6cdb97ac5e1_shape-07.svg", alt="icon")

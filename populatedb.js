@@ -1,4 +1,3 @@
-#! /usr/bin/env node
 const crypto = require("crypto");
 
 console.log(
@@ -9,10 +8,7 @@ console.log(
   const userArgs = process.argv.slice(2);
   
   const Product = require("./models/product");
-  
-  const products = [];
-
-  
+    
   const mongoose = require("mongoose");
   mongoose.set("strictQuery", false);
   

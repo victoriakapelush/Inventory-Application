@@ -4,10 +4,11 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
-var indexRouter = require('./routes/index');
-var storyRouter = require('./routes/story');
+const indexRouter = require('./routes/index');
+const storyRouter = require('./routes/story');
+const editRouter = require('./routes/edit');
 
-var app = express();
+const app = express();
 
 // Set up mongoose connection
 const mongoose = require("mongoose");
@@ -33,17 +34,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/story', storyRouter);
-
-// Define a schema
-const Schema = mongoose.Schema;
-
-const SomeModelSchema = new Schema({
-  a_string: String,
-  a_date: Date,
-});
-
-// Compile model from schema
-const SomeModel = mongoose.model("SomeModel", SomeModelSchema);
+app.use('/edit', editRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

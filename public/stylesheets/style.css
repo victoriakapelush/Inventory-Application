@@ -175,6 +175,7 @@ font-size: 1rem;
 .productName {
   text-align: left;
   margin: 0.5rem 0 .5rem 0;
+  font-weight: bolder;
 }
 
 .productPrice {
@@ -369,3 +370,54 @@ font-size: 1rem;
   justify-content: space-between;
   margin: 3rem 3rem;
 }
+
+/* EDIT PAGE FOR ALL PRODUCTS */
+
+.edit-page {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 3rem 3rem;
+  gap: 4rem;
+}
+
+.editProductImage {
+  border-style: solid;
+  border-width: 4px;
+  border-color: #c4ff88;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  width: 40rem;
+  height: auto;
+}
+
+.editProductGeneralInfo {
+  width: fit-content;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 2rem;
+}
+
+.editProductName {
+  line-height: 1.2em;
+  font-weight: 400;
+  font-size: 3.5rem;
+}
+
+.editProductDescription, .editProductPrice, .editProductName {
+  margin: 0 0;
+  font-family: 'Nuosu SIL', sans-serif;
+}
+
+.editProductDescription {
+  font-size: 1.2rem;
+}
+
+.editProductPrice {
+  font-size: 2rem;
+  padding: 1rem 1rem;
+  align-items: center;
+}
+
