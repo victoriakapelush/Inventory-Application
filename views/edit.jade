@@ -6,14 +6,14 @@ block content
   header 
     div.links 
       a(href="/") Our Menu
-      a(href="./story") Our Story
+      a(href="../story") Our Story
     div.logo
       img.logo(src="../images/title.svg", alt="Logo")
     div.recipes-address
       div.address
         p 119 Tanglewood Lane 
         p Gulfport, MS 39503
-      a.recipes(href="#") Recipes
+      a.recipes(href="../addNew") Add new product
   section.edit-page
     div
       if product_image
@@ -21,10 +21,26 @@ block content
     div.editProductGeneralInfo
       if product_name
         p.editProductName !{product_name}
+        div.editProductForm
+          p.editProductInstructions To change the heading, enter your option below and click "Submit".
+          form.formEditProduct(method="post" action=`/edit/${_id}`)
+            input(type="hidden" name="product_id" id="product_id" value=_id)
+            input.editProductInput(type="text" name="product_name" id="product_name" value=product_name)
+            button.recipes.editLink.submitButton(type="submit") Submit
       if product_description
         p.editProductDescription !{product_description}
       if product_price
         p.editProductPrice.productPrice !{product_price}
+        div.editProductForm
+          p.editProductInstructions To change the price, enter your option below and click "Submit".
+          form.formEditProduct(method="post" action=`/edit/${_id}`)
+            input(type="hidden" name="product_id" id="product_id" value=_id)
+            input.editProductInput(type="text" name="product_price" id="product_price" value=product_price)
+            button.recipes.editLink.submitButton(type="submit") Submit
+      div.editProductForm
+      form(method="post", action=`/edit/${_id}?_method=DELETE`)
+          input(type="hidden", name="_method", value="DELETE")
+          button(type="submit") Delete Product
   footer 
     div.icons-footer-left
       img.logo(src="https://assets.website-files.com/62b03a7e084ea567885272c1/62b195f3d08db6cdb97ac5e1_shape-07.svg", alt="icon")

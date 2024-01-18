@@ -421,3 +421,35 @@ font-size: 1rem;
   align-items: center;
 }
 
+.editProductInstructions {
+  font-style: italic;
+  margin: 0 0;
+}
+
+.editProductInput {
+  width: 70%;
+  padding: .4rem .4rem;
+  font-size: 1rem;
+  border: 1px solid black;
+}
+
+.editProductForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.submitButton {
+  width: fit-content;
+  margin: 0 0;
+  cursor: pointer;
+}
+
+.formEditProduct {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1rem;
+}
+

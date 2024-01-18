@@ -8,7 +8,11 @@ const indexRouter = require('./routes/index');
 const storyRouter = require('./routes/story');
 const editRouter = require('./routes/edit');
 
+const methodOverride = require('method-override');
 const app = express();
+
+app.use(methodOverride('_method'));
+
 
 // Set up mongoose connection
 const mongoose = require("mongoose");

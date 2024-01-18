@@ -13,7 +13,7 @@ block content
       div.address
         p 119 Tanglewood Lane 
         p Gulfport, MS 39503
-      a.recipes(href="#") Recipes
+      a.recipes(href='./addNew') Add new product
   section.menu-title
     div 
       h1 Our menu
@@ -28,7 +28,10 @@ block content
             div.productPrice 
               p #{product.product_price}
           p.productDescription #{product.product_description}
-          a.recipes.editLink(href=`./edit/${product.product_id}`) Edit
+          a.recipes.editLink(href=`./edit/${product._id}`) Edit
+          form(method="post", action=`/edit/${product._id}?_method=DELETE`)
+            input(type="hidden", name="_method", value="DELETE")
+            button(type="submit") Delete
     else
       p No products found
   footer 
