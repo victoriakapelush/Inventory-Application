@@ -9,6 +9,9 @@ const storyRouter = require('./routes/story');
 const editRouter = require('./routes/edit');
 const addNewRouter = require('./routes/addNew');
 
+require('dotenv').config();
+const config = require('./config');
+
 const methodOverride = require('method-override');
 const app = express();
 
@@ -19,7 +22,7 @@ app.use(methodOverride('_method'));
 const mongoose = require("mongoose");
 const Product = require('./models/product');
 mongoose.set("strictQuery", false);
-const mongoDB = "mongodb+srv://victoriakapelush:sakuraSun123@cluster0.qpt6ako.mongodb.net/inventory_application?retryWrites=true&w=majority";
+const mongoDB = config.mongoDB;;
 
 // Wait for database to connect, logging an error if there is a problem
 main().catch((err) => console.log(err));
