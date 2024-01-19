@@ -31,7 +31,7 @@ block content
           a.recipes.editLink(href=`./edit/${product._id}`) Edit
           form(method="post", action=`/edit/${product._id}?_method=DELETE`)
             input(type="hidden", name="_method", value="DELETE")
-            button(type="submit") Delete
+            button.recipes.editLink.deleteButton(type="submit") Delete
     else
       p No products found
   footer 

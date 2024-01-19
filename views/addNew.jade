@@ -1,0 +1,37 @@
+extends layout
+head 
+  title Inventory Application
+
+block content
+  header 
+    div.links 
+      a(href="/") Our Menu
+      a(href="./story") Our Story
+    div.logo
+      img.logo(src="./images/title.svg", alt="Logo")
+    div.recipes-address
+      div.address
+        p 119 Tanglewood Lane 
+        p Gulfport, MS 39503
+      a.recipes(href='./addNew') Add new product
+  section.addNewForm
+    h1 Add new product details
+    form.newProductForm(method="post" action='/addNew' enctype="multipart/form-data")
+        input(type="hidden" name="product_id" id="product_id" value=_id)
+        label.firstLabel(for="product_name") Product name: 
+        input(type="text" name="product_name" id="product_name" value=product_name placeholder="product name")
+        label(for="product_image") Product Image:
+        input(type="file" name="product_image" id="product_image")
+        label(for="product_description") Product description: 
+        input(type="text" name="product_description" id="product_description" value=product_description placeholder="product description")
+        label(for="product_price") Product price: 
+        input(type="text" name="product_price" id="product_price" value=product_price placeholder="product price")
+        button.recipes.editLink.submitButton.submitAddNewPage(type="submit") Submit
+  footer 
+    div.icons-footer-left
+      img.logo(src="https://assets.website-files.com/62b03a7e084ea567885272c1/62b195f3d08db6cdb97ac5e1_shape-07.svg", alt="icon")
+    div.personal-link
+      p Designed and developed by 
+      a.recipes(href="https://victoriakapelush.com" target='_blank') Victoria Kapelush
+    div 
+      img.logo(src="https://assets.website-files.com/62b03a7e084ea567885272c1/62b19709084a2a4746a326da_29%20(2).svg", alt="icon2")

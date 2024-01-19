@@ -40,7 +40,7 @@ block content
       div.editProductForm
       form(method="post", action=`/edit/${_id}?_method=DELETE`)
           input(type="hidden", name="_method", value="DELETE")
-          button(type="submit") Delete Product
+          button.recipes.editLink.deleteButton(type="submit") Delete Product
   footer 
     div.icons-footer-left
       img.logo(src="https://assets.website-files.com/62b03a7e084ea567885272c1/62b195f3d08db6cdb97ac5e1_shape-07.svg", alt="icon")

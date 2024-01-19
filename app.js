@@ -7,6 +7,7 @@ const logger = require('morgan');
 const indexRouter = require('./routes/index');
 const storyRouter = require('./routes/story');
 const editRouter = require('./routes/edit');
+const addNewRouter = require('./routes/addNew');
 
 const methodOverride = require('method-override');
 const app = express();
@@ -35,10 +36,12 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static('uploads')); // Serve uploaded files
 
 app.use('/', indexRouter);
 app.use('/story', storyRouter);
 app.use('/edit', editRouter);
+app.use('/addNew', addNewRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

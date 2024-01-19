@@ -453,3 +453,60 @@ font-size: 1rem;
   gap: 1rem;
 }
 
+.productPrice {
+  width: fit-content;
+  height: auto;
+  padding: 1rem 1rem;
+}
+
+.deleteButton {
+  background-color: rgb(240, 108, 108);
+  color: black;
+  border-color: black;
+}
+
+.deleteButton:hover {
+  background-color: rgb(171, 5, 5);
+  color: black;
+  border-color: black;
+}
+
+/* Add new product details */
+
+.addNewForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+.addNewForm h1 {
+  margin: 4rem 0 2rem 0;
+}
+
+.newProductForm {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+}
+
+.newProductForm input {
+  width: 20rem;
+  height: 1rem; 
+  border: 1px solid #004b1a;
+  padding: .3rem .3rem;
+}
+
+.newProductForm label {
+  padding: 2rem 0 .5rem 0;
+}
+
+.firstLabel {
+  padding-top: 1rem !important;
+}
+
+.submitAddNewPage {
+  margin-top: 1rem;
+  margin-bottom: 7rem;
+}
